@@ -62,7 +62,7 @@ void Disparo::estela() {
 	//estela
 	glColor3f(0.0f, 1.0f, 1.0f);
 	glBegin(GL_LINES);
-	glVertex2d(posicion_inicial.x, posicion_inicial.y);
+	glVertex2d(origen.x,origen.y);
 	glVertex2d(posicion.x, posicion.y);
 	glEnd();*/
 
