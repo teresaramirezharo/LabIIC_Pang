@@ -25,7 +25,7 @@ void Disparo::mueve(float t)
 	velocidad.y = velocidad.y + aceleracion.y * t;
 	
 }
-void Disparo::setvalores(float px, float py)
+void Disparo::setpos(float px, float py)
 {
 	posicion.x = px;
 	posicion.y = py;
