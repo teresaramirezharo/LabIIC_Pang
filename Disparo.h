@@ -12,7 +12,7 @@ public:
 	Disparo();
 	void dibuja();
 	void mueve(float  t);
-	void setvalores(float px, float py);
+	void setpos(float px, float py);
 	void estela();
 };
 
