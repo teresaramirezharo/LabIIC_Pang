@@ -6,10 +6,13 @@ Pared::Pared() {
 	limite2 = {};
 };
 
-void Pared::setvalores(unsigned char r, unsigned char v, unsigned char a, float x1, float y1,float x2, float y2) {
+void Pared::setcolor(Byte r, Byte v, Byte a, ) {
 	rojo = r;
-	verde=v;
-    azul=a;
+	verde = v;
+   	azul = a;
+	
+}
+void Pared::setpos(float x1, float y1,float x2, float y2){
 	limite1.x =x1;
 	limite1.y = y1;
 	limite2.x = x2;
