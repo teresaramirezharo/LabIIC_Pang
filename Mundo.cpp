@@ -50,11 +50,12 @@ void Mundo::inicializa()
 	x_ojo = 0;
 	y_ojo = 7.5;
 	z_ojo = 30;
-	esf.setvalores(255, 0, 255, 1.5f, 2, 4);
-	bon.setvalores(5.0f, 5.0f);
-	dis.setvalores(-5.0f, 0.0f);
-	pla.setvalores(255, 255, 255, -5.0f, 9.0f, 5.0f, 9.0f);
-		
+	esf.setcolor(255, 0, 255);
+	esf.setradio(1.5f);
+	esf.setpos(2, 4);
+	bon.setpos(5.0f, 5.0f);
+	dis.setpos(-5.0f, 0.0f);
+	plat.setpos(-5.0f, 9.0f, 5.0f, 9.0f);
 }
 
 void Mundo::tecla(unsigned char key)
