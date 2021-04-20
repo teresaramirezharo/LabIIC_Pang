@@ -14,6 +14,8 @@ public:
 	Esfera();
 	void dibuja();
 	void mueve(float t);
-	void setvalores(unsigned char r, unsigned char v, unsigned char a, float ra, float px, float py);
+	void setcolor(unsigned char r, unsigned char v, unsigned char a);
+	void setpos(float x, float y);
+	void setradio(float r);
 };
 
