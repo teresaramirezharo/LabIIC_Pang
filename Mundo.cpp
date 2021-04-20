@@ -13,7 +13,7 @@ void Mundo::rotarOjo()
 void Mundo::dibuja()
 {
 	gluLookAt(x_ojo, y_ojo, z_ojo,  // posicion del ojo
-			0.0, 7.5, 0.0,      // hacia que punto mira  (0,0,0) 
+			0.0, y_ojo, 0.0,      // hacia que punto mira  (0,0,0) 
 			0.0, 1.0, 0.0);      // definimos hacia arriba (eje Y)    
 
 	//aqui es donde hay que poner el codigo de dibujo
@@ -23,7 +23,7 @@ void Mundo::dibuja()
 	bon.dibuja();
 	per.dibuja();
 	pla.dibuja();
-	dis.estela();
+
 	//dibujo del suelo
 	/*glDisable(GL_LIGHTING);
 	glBegin(GL_POLYGON);
@@ -47,16 +47,13 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	x_ojo=0;
-	y_ojo=10;
-	z_ojo=25;
-		//x_ojo = 0;
-		//y_ojo = 7.5;
-		//z_ojo = 30;
-		esf.setvalores(255, 0, 255, 1.5f, 2, 4);
-		bon.setvalores(5.0f, 5.0f);
-		dis.setvalores(-5.0f, 0.0f);
-		pla.setvalores(255, 255, 255, -5.0f, 9.0f, 5.0f, 9.0f);
+	x_ojo = 0;
+	y_ojo = 7.5;
+	z_ojo = 30;
+	esf.setvalores(255, 0, 255, 1.5f, 2, 4);
+	bon.setvalores(5.0f, 5.0f);
+	dis.setvalores(-5.0f, 0.0f);
+	pla.setvalores(255, 255, 255, -5.0f, 9.0f, 5.0f, 9.0f);
 		
 }
 
