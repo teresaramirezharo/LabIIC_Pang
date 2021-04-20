@@ -9,14 +9,18 @@ Esfera::Esfera() {
 	aceleracion.x=0.0f;
 	aceleracion.y = -9.81f;
 }
-void Esfera::setvalores(unsigned char r, unsigned char v, unsigned char a, float ra, float px, float py)
-{
+void Esfera::setcolor(unsigned char r, unsigned char v, unsigned char a) {
 	rojo = r;
 	verde = v;
 	azul = a;
-	radio = ra;
-	posicion.x = px;
-	posicion.y = py;
+
+}
+void Esfera::setradio(float r) {
+	radio = r;
+}
+void Esfera::setpos(float x, float y) {
+	posicion.x = x;
+	posicion.y = y;
 }
 void Esfera::dibuja()
 {
