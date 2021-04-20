@@ -6,7 +6,7 @@ Pared::Pared() {
 	limite2 = {};
 };
 
-void Pared::setcolor(Byte r, Byte v, Byte a, ) {
+void Pared::setcolor(unsigned char r, unsigned char v, unsigned char a, ) {
 	rojo = r;
 	verde = v;
    	azul = a;
