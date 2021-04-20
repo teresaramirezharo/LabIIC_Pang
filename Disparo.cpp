@@ -3,9 +3,10 @@
 
 Disparo::Disparo() {
 	radio = 0.25f;
-	posicion = origen = {};
+	posicion = {};
 	velocidad = {};
 	aceleracion.y=9.81f;
+	orige.x=-5.0f;
 }
 void Disparo::dibuja()
 {
