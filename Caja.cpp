@@ -2,17 +2,19 @@
 #include "freeglut.h"
 
 Caja::Caja() {
-	suelo.setpos(-10,0,10,0);
+	
+	suelo.setposicion(-10, 0, 10, 0);
 	suelo.setcolor(0.0f, 105.0f, 0.0f);
-	
-	techo.setpos(-10, 15, 10, 15);
+
+	techo.setposicion(-10, 15, 10, 15);
 	techo.setcolor(0.0f, 105.0f, 0.0f);
-	
-	pared_dcha.setpos(-10, 0, -10, 15);
+
+	pared_dcha.setposicion(-10, 0, -10, 15);
 	pared_dcha.setcolor(0.0f, 255.0f, 100.0f);
-	
-	pared_izq.setpos( 10, 0, 10, 15);
-	pared_izq.setcolor(0.0f, 255.0f,100.0f);
+
+	pared_izq.setposicion(10, 0, 10, 15);
+	pared_izq.setcolor(0.0f, 255.0f, 100.0f);
+
 }
 void Caja::dibuja()
 {
@@ -21,3 +23,4 @@ void Caja::dibuja()
 	pared_izq.dibuja();
 	pared_dcha.dibuja();
 }
+
