@@ -10,6 +10,11 @@ private:
 public:
 	Persona();
 	void dibuja();
+	void setVel(float vx, float vy);
 	void mueve(float t);
+	Vector2D getposicion();
+	void setposicion(float px, float py);
+	friend class Interaccion;
 };
+
 
