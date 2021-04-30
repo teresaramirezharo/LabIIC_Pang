@@ -1,12 +1,8 @@
 #include "Disparo.h"
 #include "freeglut.h"
 
-Disparo::Disparo() {
+Disparo::Disparo() :posicion(0, 0), origen(0,0), velocidad(0, 0), aceleracion(0, 9.81f) {
 	radio = 0.25f;
-	posicion = {};
-	velocidad = {};
-	aceleracion.y=9.81f;
-	orige.x=-5.0f;
 }
 void Disparo::dibuja()
 {
@@ -19,16 +15,14 @@ void Disparo::dibuja()
 }
 void Disparo::mueve(float t)
 {
-	posicion.x = posicion.x + velocidad.x * t + 0.5f * aceleracion.x * t * t;
-	posicion.y = posicion.y + velocidad.y * t + 0.5f * aceleracion.y * t * t;
-	velocidad.x = velocidad.x + aceleracion.x * t;
-	velocidad.y = velocidad.y + aceleracion.y * t;
-	
+	posicion = posicion + velocidad * t + aceleracion * (0.5f * t * t);
+	velocidad = velocidad + aceleracion * t;
 }
-void Disparo::setpos(float px, float py)
+void Disparo::setposicion(Vector2D p)
 {
-	posicion.x = px;
-	posicion.y = py;
+	posicion = p;
+	origen.x = -5.0f;
+	origen.y = 0.0f;
 }
 void Disparo::estela() {
 	if (posicion.y>0.01){
@@ -59,14 +53,13 @@ void Disparo::estela() {
 		glutSolidTeapot(0.15f);
 		glPopMatrix();
 	}
-
-	/*estela original 
-	//estela
-	glColor3f(0.0f, 1.0f, 1.0f);
+	//estela original
+	/*glColor3f(0.0f, 1.0f, 1.0f);
 	glBegin(GL_LINES);
-	glVertex2d(origen.x,origen.y);
+	glVertex2d(origen.x, origen.y);
 	glVertex2d(posicion.x, posicion.y);
 	glEnd();*/
+
 
 
 }
