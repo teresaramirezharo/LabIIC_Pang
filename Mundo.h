@@ -15,13 +15,14 @@ private:
 	Persona per;
 	Caja caj;
 	Disparo dis;
-	Esfera esf;
+	Esfera esf, esf2;
 	Bonus bon;
-	Pared pla;
+	Pared plat;
 public: 
 	void tecla(unsigned char key);
 	void inicializa();
 	void rotarOjo();
 	void mueve();
 	void dibuja();
+	void teclaEspecial(unsigned char key);
 };
